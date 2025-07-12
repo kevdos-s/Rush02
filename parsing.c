@@ -19,15 +19,21 @@ char	**ft_split(char *str, char separator)
 {
 	char	**tab;
 	int		i;
-	int		j;
+	int		countsep;
 
+	countsep = 0;
 	i = 0;
 	while (str[i])
 	{
+		if (str[i] == separator && str[i + 1] != '\0')
+		{
+			countsep++;
+		}
 		i++;
-
 	}
-	
+	tab = (char **)malloc(countsep * sizeof(char *));
+
+	i = 0;
 }
 //parse la string comme dit sur le sujet, et enregistre les dans la structure
 t_dictionnary_number *ft_parse_dictionnary_to_struct(char *p_str_dictionnary)
