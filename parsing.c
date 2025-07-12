@@ -19,7 +19,7 @@ t_dictionnary_number *ft_parse_dictionnary_to_struct(char *p_str_dictionnary)
 {
 	//que tu comprenne bien, je veux en retour un tableau ou au index c est des type de "t_dictionnary" si t as jamais utilisé de structure je te laisserais regarder tout ça
 	t_dictionnary_number *l_dictionnary;
-
+	
 	//commence par splitter ta string en argument par les retours à la ligne les mettre dans un tableau de string
 
 	//ensuite tu peux te faire une fonction ou t envoie une string par exemple "0: zero"
