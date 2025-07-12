@@ -51,7 +51,7 @@ char	**ft_split(char *str, char separator)
 		}
 		i++;
 	}
-	
+	return (tab);
 }
 //parse la string comme dit sur le sujet, et enregistre les dans la structure
 t_dictionnary_number *ft_parse_dictionnary_to_struct(char *p_str_dictionnary)
