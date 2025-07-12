@@ -16,7 +16,8 @@
 int main(int argc, char **argv)
 {
 	char *value_to_convert;
-
+	char *path_dictionnary_file;
+ 
 	if (argc != 2 || argc != 3)
 	{
 		write(1, "Error\n", 6);
