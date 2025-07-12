@@ -37,19 +37,24 @@ char	**ft_split(char *str, char separator)
 	i = 0;
 	j = 0;
 	countsep = 0;
+	int l_start_position = 0;
+	int l_current_index_tab = 0;
+
 	while (str[i])
 	{
-		if (str[i] == separator && (str[i + 1] != '\0' || i != 0))
+		if (str[i] == separator)
 		{
-			countsep++;
-			j = 0;
+			int size = i - l_start_position;
+			tab[l_current_index_tab] = malloc(size * sizeof(char));
+			while (l_current_index_tab < size)
+			{
+				tab[l_current_index_tab][j] = str[l_start_position];
+				j++;
+				l_start_position ++;
+			}
+
+
 		}
-		else
-		{
-			tab[countsep][j] = str[i];
-			j++;
-		}
-		i++;
 	}
 	return (tab);
 }
@@ -67,4 +72,16 @@ t_dictionnary_number *ft_parse_dictionnary_to_struct(char *p_str_dictionnary)
 	//evidement tu devras utiliser les malloc, utilise autant de fonction qu'il te semble necessaire, met les toutes ici et on rangera correctement demain ou dimanche aprem
 
 }
-
+/*
+		if (str[i] == separator && (str[i + 1] != '\0' || i != 0))
+		{
+			countsep++;
+			j = 0;
+		}
+		else
+		{
+			tab[countsep][j] = str[i];
+			j++;
+		}
+		i++;
+		 */
