@@ -52,9 +52,8 @@ char	**ft_split(char *str, char separator)
 				j++;
 				l_start_position ++;
 			}
-
-
 		}
+		i++;
 	}
 	return (tab);
 }
