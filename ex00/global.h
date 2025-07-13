@@ -15,8 +15,8 @@
 # define GLOBAL_H
 
 typedef struct s_dictionnary_number{
-	int nb;
-	char *str_nb_spelled;
+	char nb[255];
+	char str_nb_spelled[255];
 } t_dictionnary_number;
 
 typedef struct s_program_data{
@@ -37,12 +37,14 @@ typedef struct s_program_data{
 #include <stdio.h>
 
 //parsing
-t_dictionnary_number *ft_parse_dictionnary_to_struct(char *p_str_dictionnary);
+char	**ft_split(char *str, char separator);
+void ft_split_second_part(char *str, char sep, char **tab, int current_str);
 
 //strutils
 char *ft_strup(char *str_to_copy, int size);
 int ft_strlength(char *str);
 int ft_error_msg(char *msg);
+int ft_count_sep(char *str, char sep);
 
 //filemanager
 char *ft_get_file_content(int file_descriptor);
@@ -55,8 +57,10 @@ int ft_check_file_extension(char *str);
 int ft_check_and_get_content_file(t_program_data *p_data);
 
 //dictionnary_manager
-void ft_init_dictionnary(t_program_data *p_data, int is_default);
-void ft_create_dictionnary(char *content, t_program_data *p_data, int is_default);
+int ft_init_dictionnary(t_program_data *p_data, int is_default);
+int ft_create_dictionnary(char *content, t_program_data *p_data, int is_default);
+int ft_check_data_dict(char **line_content, int size, t_dictionnary_number *p_arr_dict);
+int ft_check_line(char *line, t_dictionnary_number *p_arr_dict, int line_nb);
 
 #define DEFAULT_DICT_PATH "./ressource/numbers.dict"
 #endif

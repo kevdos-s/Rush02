@@ -30,4 +30,8 @@ int main(int argc, char **argv)
 	}
 	ft_init_dictionnary(&l_program_data, 1);
 
+
+
+
+
 }

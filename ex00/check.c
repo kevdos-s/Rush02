@@ -6,7 +6,7 @@
 /*   By: kevdos-s <kevdos-s@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 06:49:06 by kevdos-s          #+#    #+#             */
-/*   Updated: 2025/07/13 09:57:30 by kevdos-s         ###   ########.fr       */
+/*   Updated: 2025/07/13 14:40:05 by kevdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_check_nb_arg(int nb_args)
 {
-	if (!(nb_args <= 3))
+	if (!(nb_args <= 3) || nb_args == 1)
 	{
 		return (ft_error_msg("Not the right number of arguments"));
 	}
