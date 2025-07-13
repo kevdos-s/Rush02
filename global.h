@@ -29,4 +29,10 @@ typedef struct s_dictionnary_number{
 
 
 t_dictionnary_number *ft_parse_dictionnary_to_struct(char *p_str_dictionnary);
+
+char *ft_strup(char *str_to_copy, int size);
+int ft_strlength(char *str);
+
+char *ft_get_file_content(int file_descriptor);
+char *ft_create_memory_str(int nb_octet);
 #endif
