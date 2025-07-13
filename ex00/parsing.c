@@ -35,17 +35,20 @@ void ft_split_second_part(char *str, char sep, char **tab, int curr_str)
 	curr_tab_str = 0;
 	l_start_pos = 0;
 	l_current_index_tab = 0;
-	while (str[curr_str])
+	while (str[curr_str] != '\0')
 	{
-		if (str[curr_str] == sep || str[curr_str] == '\0')
+		if (str[curr_str] == sep || str[curr_str + 1] == '\0')
 		{
-			tab[l_current_index_tab] = malloc((curr_str - l_start_pos) * sizeof(char));
+			if (str[curr_str + 1] == '\0')
+				curr_str++;
+			tab[l_current_index_tab] = malloc((curr_str - l_start_pos + 1) * sizeof(char));
 			while (l_start_pos < curr_str)
 			{
 				tab[l_current_index_tab][curr_tab_str] = str[l_start_pos];
 				curr_tab_str++;
 				l_start_pos ++;
 			}
+			tab[l_current_index_tab][curr_tab_str] = '\0';
 			l_start_pos++;
 			l_current_index_tab++;
 			curr_tab_str = 0;

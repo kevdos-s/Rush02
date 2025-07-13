@@ -6,7 +6,7 @@
 /*   By: kevdos-s <kevdos-s@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:34:37 by kevdos-s          #+#    #+#             */
-/*   Updated: 2025/07/13 16:31:17 by kevdos-s         ###   ########.fr       */
+/*   Updated: 2025/07/13 16:56:50 by kevdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int ft_count_sep(char *str, char sep)
 	result = 0;
 	while (str[i])
 	{
-		if (str[i] == sep || str[i] == '\0')
+		if (str[i] == sep || str[i + 1] == '\0')
 		{
 			result++;
 		}

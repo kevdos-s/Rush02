@@ -6,7 +6,7 @@
 /*   By: kevdos-s <kevdos-s@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 10:16:16 by kevdos-s          #+#    #+#             */
-/*   Updated: 2025/07/13 16:48:37 by kevdos-s         ###   ########.fr       */
+/*   Updated: 2025/07/13 17:05:41 by kevdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,18 +63,14 @@ int ft_check_data_dict(char **line_content, int size, t_dictionnary_number *p_ar
 	int current_line;
 	char **small_dict;
 	int count_sep_dict;
-	int current;
 
 	current_line = 0;
-	current = 0;
 	count_sep_dict = 0;
 	while (current_line < size)
 	{
 		count_sep_dict = ft_count_sep(line_content[current_line], ':');
-		while(line_content[current_line][current])
-		{
-			ft_check_line(line_content[current_line], p_arr_dict, current_line);
-		}
+
+		ft_check_line(line_content[current_line], p_arr_dict, current_line);
 		current_line++;
 	}
 
@@ -83,5 +79,7 @@ int ft_check_data_dict(char **line_content, int size, t_dictionnary_number *p_ar
 
 int ft_check_line(char *line, t_dictionnary_number *p_arr_dict, int line_nb)
 {
-
+	printf("ligne actuelle: %s\n", line);
+	char **test = ft_split(line, ':');
+	printf("%s ::: %s\n", test[0], test[1]);
 }
