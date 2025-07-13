@@ -20,6 +20,13 @@ typedef struct s_dictionnary_number{
 } t_dictionnary_number;
 
 
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+
+#include <stdio.h>
+
 
 t_dictionnary_number *ft_parse_dictionnary_to_struct(char *p_str_dictionnary);
 #endif
