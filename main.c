@@ -24,7 +24,10 @@ int main(int argc, char **argv)
 	if (!ft_check_and_attribute_args(argc, argv, &l_program_data))
 		return (0);
 
-	int current = 0;
-
+	if(l_program_data.path_filename != NULL)
+	{
+		if (!ft_check_file(&l_program_data))
+			return (0);
+	}
 
 }

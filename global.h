@@ -45,9 +45,10 @@ int ft_error_msg(char *msg);
 
 //filemanager
 char *ft_get_file_content(int file_descriptor);
-char *ft_create_memory_str(int nb_octet);
 
 //check
 int	ft_check_and_attribute_args(int argc, char **argv, t_program_data *p_data);
 int	ft_check_nb_arg(int nb_args);
+int ft_check_file(t_program_data *p_data);
+int ft_check_file_extension(char *str);
 #endif
