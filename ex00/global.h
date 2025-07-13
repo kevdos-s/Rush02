@@ -15,8 +15,8 @@
 # define GLOBAL_H
 
 typedef struct s_dictionnary_number{
-	char nb[255];
-	char str_nb_spelled[255];
+	char *nb;
+	char *str_nb_spelled;
 } t_dictionnary_number;
 
 typedef struct s_program_data{
@@ -45,6 +45,7 @@ char *ft_strup(char *str_to_copy, int size);
 int ft_strlength(char *str);
 int ft_error_msg(char *msg);
 int ft_count_sep(char *str, char sep);
+char *ft_remove_space(char *str);
 
 //filemanager
 char *ft_get_file_content(int file_descriptor);

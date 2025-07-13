@@ -6,7 +6,7 @@
 /*   By: kevdos-s <kevdos-s@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:34:37 by kevdos-s          #+#    #+#             */
-/*   Updated: 2025/07/13 16:56:50 by kevdos-s         ###   ########.fr       */
+/*   Updated: 2025/07/13 17:54:57 by kevdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,35 @@ int ft_count_sep(char *str, char sep)
 		i++;
 	}
 
+	return (result);
+}
+
+char *ft_remove_space(char *str)
+{
+	int current;
+	int temp_current;
+	int size;
+	char *result;
+
+	current = 0;
+
+	while (str[current] >= 01 && str[current] <= 32)
+		current++;
+	temp_current = current;
+
+	while(str[current] >= ' ' && str[current] <= '~')
+		current++;
+
+	size = current - temp_current;
+	result = (char *)malloc((size + 1) * sizeof(char));
+	current = temp_current;
+	temp_current = 0;
+
+	while (str[current] >= ' ' && str[current] <= '~')
+	{
+		result[temp_current] = str[current];
+		current++;
+		temp_current++;
+	}
 	return (result);
 }
