@@ -52,6 +52,7 @@ int	ft_check_and_attribute_args(int argc, char **argv, t_program_data *p_data);
 int	ft_check_nb_arg(int nb_args);
 int ft_check_file(t_program_data *p_data);
 int ft_check_file_extension(char *str);
+int ft_check_and_get_content_file(t_program_data *p_data);
 
 #define DEFAULT_DICT_PATH "./ressource/numbers.dict"
 #endif
