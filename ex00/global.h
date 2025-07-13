@@ -63,5 +63,8 @@ int ft_create_dictionnary(char *content, t_program_data *p_data, int is_default)
 int ft_check_data_dict(char **line_content, int size, t_dictionnary_number *p_arr_dict);
 int ft_check_line(char *line, t_dictionnary_number *p_arr_dict, int line_nb);
 
+//memory_helper
+void ft_big_free(char **arr_str, int size);
+
 #define DEFAULT_DICT_PATH "./ressource/numbers.dict"
 #endif
