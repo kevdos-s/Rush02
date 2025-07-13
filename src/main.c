@@ -17,7 +17,10 @@ int main(int argc, char **argv)
 {
 	char *value_to_convert;
 	char *path_dictionnary_file;
- 
+
+	printf("hello");
+
+
 	if (argc != 2 || argc != 3)
 	{
 		write(1, "Error\n", 6);
@@ -33,7 +36,7 @@ int main(int argc, char **argv)
 		value_to_convert = argv[2];
 	}
 	int current = 0;
-	
+
 	while (value_to_convert[current] != '\0')
 	{
 		if (value_to_convert[current] == '-' || value_to_convert[current] == ','
