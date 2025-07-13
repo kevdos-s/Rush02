@@ -33,9 +33,6 @@ typedef struct s_program_data{
 #include <unistd.h>
 #include <stdlib.h>
 
-
-#include <stdio.h>
-
 //parsing
 char	**ft_split(char *str, char separator);
 void ft_split_second_part(char *str, char sep, char **tab, int current_str);
