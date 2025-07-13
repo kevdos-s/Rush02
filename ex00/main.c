@@ -30,8 +30,10 @@ int main(int argc, char **argv)
 	}
 	ft_init_dictionnary(&l_program_data, 1);
 
+	if (l_program_data.path_filename != NULL)
+		ft_write_nb_spelled(&l_program_data, 0);
+	else
+		ft_write_nb_spelled(&l_program_data, 1);
 
-
-
-
+	//a faire les free de la structure
 }

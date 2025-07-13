@@ -6,7 +6,7 @@
 /*   By: kevdos-s <kevdos-s@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 05:34:37 by kevdos-s          #+#    #+#             */
-/*   Updated: 2025/07/13 17:54:57 by kevdos-s         ###   ########.fr       */
+/*   Updated: 2025/07/13 20:21:10 by kevdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,4 +106,19 @@ char *ft_remove_space(char *str)
 		temp_current++;
 	}
 	return (result);
+}
+
+void ft_putstr_result(char *str)
+{
+	int current;
+
+	current = 0;
+
+	while (str[current] != '\0')
+	{
+		write(1, &str[current], 1);
+		current++;
+	}
+	write(1, " ", 1);
+
 }

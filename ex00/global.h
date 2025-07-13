@@ -46,6 +46,7 @@ int ft_strlength(char *str);
 int ft_error_msg(char *msg);
 int ft_count_sep(char *str, char sep);
 char *ft_remove_space(char *str);
+void ft_putstr_result(char *str);
 
 //filemanager
 char *ft_get_file_content(int file_descriptor);
@@ -65,6 +66,11 @@ int ft_check_line(char *line, t_dictionnary_number *p_arr_dict, int line_nb);
 
 //memory_helper
 void ft_big_free(char **arr_str, int size);
+
+//writing_number
+void ft_write_nb_spelled(t_program_data *p_data, int use_default);
+void ft_write_unit_nb(t_program_data *p_data, int position, int use_default);
+int ft_correspond_unit(char p_c, t_dictionnary_number *p_dict, int size_dict);
 
 #define DEFAULT_DICT_PATH "./ressource/numbers.dict"
 #endif
