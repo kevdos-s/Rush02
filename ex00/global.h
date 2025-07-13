@@ -54,5 +54,9 @@ int ft_check_file(t_program_data *p_data);
 int ft_check_file_extension(char *str);
 int ft_check_and_get_content_file(t_program_data *p_data);
 
+//dictionnary_manager
+void ft_init_dictionnary(t_program_data *p_data, int is_default);
+void ft_create_dictionnary(char *content, t_program_data *p_data, int is_default);
+
 #define DEFAULT_DICT_PATH "./ressource/numbers.dict"
 #endif
