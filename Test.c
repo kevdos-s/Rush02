@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strutils.c                                         :+:      :+:    :+:   */
+/*   Test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevdos-s <kevdos-s@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/13 05:34:37 by kevdos-s          #+#    #+#             */
-/*   Updated: 2025/07/13 07:51:46 by kevdos-s         ###   ########.fr       */
+/*   Created: 2025/07/13 07:22:35 by kevdos-s          #+#    #+#             */
+/*   Updated: 2025/07/13 07:39:21 by kevdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "global.h"
 
-
-int ft_error_msg(char *msg)
+int main()
 {
-	int current;
+	unsigned long long test = 1946516515651649494;
+	unsigned long long *ptr_test = &test;
 
-	current = 0;
-	while (msg[current] != '\0')
-	{
-		write(1, &msg[current], 1);
-		current++;
-	}
-	write(1, "\n", 1);
+	printf("%llu \n", test);
+	printf("%llu \n", *ptr_test);
 
-	return (0);
+	unsigned long long *ptr_big_test;
+
+	ptr_big_test = (unsigned long long *)malloc(128);
+
+	*ptr_big_test = 17014118350000000000000000000000000000001111111111;
 }
-

@@ -1,30 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strutils.c                                         :+:      :+:    :+:   */
+/*   transform.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kevdos-s <kevdos-s@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/13 05:34:37 by kevdos-s          #+#    #+#             */
-/*   Updated: 2025/07/13 07:51:46 by kevdos-s         ###   ########.fr       */
+/*   Created: 2025/07/13 07:20:08 by kevdos-s          #+#    #+#             */
+/*   Updated: 2025/07/13 07:22:15 by kevdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "global.h"
 
-
-int ft_error_msg(char *msg)
-{
-	int current;
-
-	current = 0;
-	while (msg[current] != '\0')
-	{
-		write(1, &msg[current], 1);
-		current++;
-	}
-	write(1, "\n", 1);
-
-	return (0);
-}
 

@@ -14,36 +14,17 @@
 
 int main(int argc, char **argv)
 {
-	char *value_to_convert;
-	char *path_dictionnary_file;
+	t_program_data l_program_data;
 
 	printf("hello");
 
-
-	if (argc != 2 || argc != 3)
-	{
-		write(1, "Error\n", 6);
+	if (!ft_check_nb_arg(argc))
 		return (0);
-	}
-	if (argc == 2)
-	{
-		value_to_convert = argv[1];
-	}
-	if (argc == 3)
-	{
-		path_dictionnary_file = argv[1];
-		value_to_convert = argv[2];
-	}
+
+	if (!ft_check_and_attribute_args(argc, argv, &l_program_data))
+		return (0);
+
 	int current = 0;
 
-	while (value_to_convert[current] != '\0')
-	{
-		if (value_to_convert[current] == '-' || value_to_convert[current] == ','
-				|| value_to_convert[current] == '.')
-		{
-			write(1, "Error\n", 6);
-			return (0);
-		}
-		current++;
-	}
+
 }
