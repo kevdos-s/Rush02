@@ -28,6 +28,8 @@ int main(int argc, char **argv)
 	{
 		if (!ft_check_file(&l_program_data))
 			return (0);
+		if (!ft_check_and_get_content_file(&l_program_data))
+			return (0);
 	}
 
 }

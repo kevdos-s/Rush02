@@ -6,7 +6,7 @@
 /*   By: kevdos-s <kevdos-s@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 06:49:06 by kevdos-s          #+#    #+#             */
-/*   Updated: 2025/07/13 09:36:40 by kevdos-s         ###   ########.fr       */
+/*   Updated: 2025/07/13 09:57:30 by kevdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,11 @@ int ft_check_file(t_program_data *p_data)
 	file_descriptor = open(p_data->path_filename, O_RDONLY);
 
 	if (file_descriptor == -1)
+	{
+		close(file_descriptor);
 		return (ft_error_msg("Cannot access file or don't exist"));
+	}
+	close(file_descriptor);
 
 	return (1);
 }
@@ -83,5 +87,24 @@ int ft_check_file_extension(char *str)
 		current_str++;
 		current_ext++;
 	}
+	return (1);
+}
+
+int ft_check_and_get_content_file(t_program_data *p_data)
+{
+	char *content;
+	int file_descriptor;
+
+	file_descriptor = open(p_data->path_filename, O_RDONLY);
+
+	content = ft_get_file_content(file_descriptor);
+
+	close(file_descriptor);
+
+	if (content == NULL || content[0] == '\0')
+		return (ft_error_msg("File empty or cannot read"));
+
+	p_data->content_file = content;
+
 	return (1);
 }

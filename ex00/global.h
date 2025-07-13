@@ -22,6 +22,7 @@ typedef struct s_dictionnary_number{
 typedef struct s_program_data{
 	char *nb_to_convert;
 	char *path_filename;
+	char *content_file;
 	t_dictionnary_number *arr_dic_file;
 	int size_dic_fil;
 	t_dictionnary_number *arr_dic_default;
@@ -51,4 +52,6 @@ int	ft_check_and_attribute_args(int argc, char **argv, t_program_data *p_data);
 int	ft_check_nb_arg(int nb_args);
 int ft_check_file(t_program_data *p_data);
 int ft_check_file_extension(char *str);
+
+#define DEFAULT_DICT_PATH "./ressource/numbers.dict"
 #endif
