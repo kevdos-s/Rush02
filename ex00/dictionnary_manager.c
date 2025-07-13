@@ -6,7 +6,7 @@
 /*   By: kevdos-s <kevdos-s@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 10:16:16 by kevdos-s          #+#    #+#             */
-/*   Updated: 2025/07/13 18:10:35 by kevdos-s         ###   ########.fr       */
+/*   Updated: 2025/07/13 21:31:38 by kevdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,15 +76,15 @@ int ft_check_data_dict(char **line_content, int size, t_dictionnary_number *p_ar
 
 	return (1);
 }
-
+//ISSUE HERE TODO
+//probably issue with a malloc or smth
 int ft_check_line(char *line, t_dictionnary_number *p_arr_dict, int line_nb)
 {
 
 	char **test = ft_split(line, ':');
+	//p_arr_dict[line_nb] = malloc(sizeof(t_dictionnary_number));
 	p_arr_dict[line_nb].nb = ft_remove_space(test[0]);
 	p_arr_dict[line_nb].str_nb_spelled = ft_remove_space(test[1]);
-	free(test[0]);
-	free(test[1]);
 
 	return (1);
 }
